@@ -754,7 +754,11 @@ img {
 .portfolio__content {
   padding: 0 1.5rem;
 }
-
+.portfolio__content a {
+  width: 310px;
+  border-radius: 0.5rem;
+  justify-self: center;
+}
 .portfolio__img {
   width: 310px;
   border-radius: 0.5rem;
