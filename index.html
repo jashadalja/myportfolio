@@ -809,8 +809,11 @@
       color: var(--color-text-secondary);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-full);
-      padding: 0.3rem 0.85rem;
+      padding: 0.35rem 0.85rem;
       background: var(--color-surface);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
       transition: all var(--transition-fast);
     }
 
@@ -819,6 +822,45 @@
       color: var(--color-accent);
       transform: translateY(-2px);
       box-shadow: var(--shadow-sm);
+    }
+
+    /* Technology Icons (SVGs) */
+    .tech-icon {
+      width: 15px;
+      height: 15px;
+      object-fit: contain;
+      vertical-align: middle;
+      flex-shrink: 0;
+      display: inline-block;
+      transition: transform var(--transition-fast);
+    }
+
+    .hero-tech-chip .tech-icon {
+      width: 14px;
+      height: 14px;
+    }
+
+    .skill-tag .tech-icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    .p-tag .tech-icon,
+    .exp-tag .tech-icon {
+      width: 12px;
+      height: 12px;
+    }
+
+    .marquee-item .tech-icon {
+      width: 15px;
+      height: 15px;
+    }
+
+    .skill-tag:hover .tech-icon,
+    .hero-tech-chip:hover .tech-icon,
+    .p-tag:hover .tech-icon,
+    .exp-tag:hover .tech-icon {
+      transform: scale(1.18);
     }
 
     .hero-actions {
@@ -1456,8 +1498,11 @@
       color: var(--color-text-muted);
       background: var(--color-bg-alt);
       border: 1px solid var(--color-border-light);
-      padding: 0.2rem 0.65rem;
+      padding: 0.25rem 0.65rem;
       border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
     }
 
     /* ===========================================
@@ -1587,6 +1632,9 @@
       color: var(--color-text-secondary);
       padding: 0.25rem 0.65rem;
       border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
       transition: all var(--transition-fast);
     }
 
@@ -2158,15 +2206,24 @@
         </p>
 
         <div class="hero-tech-row">
-          <span class="hero-tech-chip">React.js</span>
-          <span class="hero-tech-chip">Next.js</span>
-          <span class="hero-tech-chip">NestJS</span>
-          <span class="hero-tech-chip">TypeScript</span>
-          <span class="hero-tech-chip">Python</span>
-          <span class="hero-tech-chip">LangChain</span>
-          <span class="hero-tech-chip">AWS</span>
-          <span class="hero-tech-chip">PostgreSQL</span>
-          <span class="hero-tech-chip">AI / LLM</span>
+          <span class="hero-tech-chip"><img src="https://cdn.simpleicons.org/react/3D5A80" alt="React" class="tech-icon"
+              loading="lazy" onerror="this.style.display='none'" /> React.js</span>
+          <span class="hero-tech-chip"><img src="https://cdn.simpleicons.org/nextdotjs/3D5A80" alt="Next.js"
+              class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Next.js</span>
+          <span class="hero-tech-chip"><img src="https://cdn.simpleicons.org/nestjs/3D5A80" alt="NestJS"
+              class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> NestJS</span>
+          <span class="hero-tech-chip"><img src="https://cdn.simpleicons.org/typescript/3D5A80" alt="TypeScript"
+              class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> TypeScript</span>
+          <span class="hero-tech-chip"><img src="https://cdn.simpleicons.org/python/3D5A80" alt="Python"
+              class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Python</span>
+          <span class="hero-tech-chip"><img src="https://cdn.simpleicons.org/langchain/3D5A80" alt="LangChain"
+              class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> LangChain</span>
+          <span class="hero-tech-chip"><img src="https://cdn.simpleicons.org/amazonwebservices/3D5A80" alt="AWS"
+              class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> AWS</span>
+          <span class="hero-tech-chip"><img src="https://cdn.simpleicons.org/postgresql/3D5A80" alt="PostgreSQL"
+              class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> PostgreSQL</span>
+          <span class="hero-tech-chip"><img src="https://cdn.simpleicons.org/openai/3D5A80" alt="AI / LLM"
+              class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> AI / LLM</span>
         </div>
 
         <div class="hero-actions">
@@ -2197,39 +2254,71 @@
     <!-- ========= MARQUEE ========= -->
     <div class="marquee-section" aria-hidden="true">
       <div class="marquee-track">
-        <span class="marquee-item"><span class="dot"></span> React.js</span>
-        <span class="marquee-item"><span class="dot"></span> Next.js</span>
-        <span class="marquee-item"><span class="dot"></span> NestJS</span>
-        <span class="marquee-item"><span class="dot"></span> Node.js</span>
-        <span class="marquee-item"><span class="dot"></span> TypeScript</span>
-        <span class="marquee-item"><span class="dot"></span> Python</span>
-        <span class="marquee-item"><span class="dot"></span> FastAPI</span>
-        <span class="marquee-item"><span class="dot"></span> LangChain</span>
-        <span class="marquee-item"><span class="dot"></span> LangGraph</span>
-        <span class="marquee-item"><span class="dot"></span> AWS Lambda</span>
-        <span class="marquee-item"><span class="dot"></span> PostgreSQL</span>
-        <span class="marquee-item"><span class="dot"></span> MongoDB</span>
-        <span class="marquee-item"><span class="dot"></span> Redis</span>
-        <span class="marquee-item"><span class="dot"></span> Docker</span>
-        <span class="marquee-item"><span class="dot"></span> HIPAA</span>
-        <span class="marquee-item"><span class="dot"></span> RAG</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/react/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> React.js</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/nextdotjs/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> Next.js</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/nestjs/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> NestJS</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/nodedotjs/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> Node.js</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/typescript/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> TypeScript</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/python/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> Python</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/fastapi/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> FastAPI</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/langchain/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> LangChain</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/langchain/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> LangGraph</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/awslambda/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> AWS Lambda</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/postgresql/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> PostgreSQL</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/mongodb/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> MongoDB</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/redis/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> Redis</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/docker/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> Docker</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/securityscorecard/3D5A80" alt=""
+            class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> HIPAA</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/openai/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> RAG</span>
         <!-- duplicate -->
-        <span class="marquee-item"><span class="dot"></span> React.js</span>
-        <span class="marquee-item"><span class="dot"></span> Next.js</span>
-        <span class="marquee-item"><span class="dot"></span> NestJS</span>
-        <span class="marquee-item"><span class="dot"></span> Node.js</span>
-        <span class="marquee-item"><span class="dot"></span> TypeScript</span>
-        <span class="marquee-item"><span class="dot"></span> Python</span>
-        <span class="marquee-item"><span class="dot"></span> FastAPI</span>
-        <span class="marquee-item"><span class="dot"></span> LangChain</span>
-        <span class="marquee-item"><span class="dot"></span> LangGraph</span>
-        <span class="marquee-item"><span class="dot"></span> AWS Lambda</span>
-        <span class="marquee-item"><span class="dot"></span> PostgreSQL</span>
-        <span class="marquee-item"><span class="dot"></span> MongoDB</span>
-        <span class="marquee-item"><span class="dot"></span> Redis</span>
-        <span class="marquee-item"><span class="dot"></span> Docker</span>
-        <span class="marquee-item"><span class="dot"></span> HIPAA</span>
-        <span class="marquee-item"><span class="dot"></span> RAG</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/react/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> React.js</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/nextdotjs/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> Next.js</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/nestjs/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> NestJS</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/nodedotjs/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> Node.js</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/typescript/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> TypeScript</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/python/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> Python</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/fastapi/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> FastAPI</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/langchain/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> LangChain</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/langchain/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> LangGraph</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/awslambda/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> AWS Lambda</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/postgresql/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> PostgreSQL</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/mongodb/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> MongoDB</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/redis/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> Redis</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/docker/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> Docker</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/securityscorecard/3D5A80" alt=""
+            class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> HIPAA</span>
+        <span class="marquee-item"><img src="https://cdn.simpleicons.org/openai/3D5A80" alt="" class="tech-icon"
+            loading="lazy" onerror="this.style.display='none'" /> RAG</span>
       </div>
     </div>
 
@@ -2347,96 +2436,95 @@
 
         <!-- Frontend -->
         <div class="skill-panel active reveal-up" id="sk-frontend">
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>React.js</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>Next.js</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>TypeScript</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>Redux / Redux Toolkit</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>React Query / TanStack</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>Vite</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>Tailwind CSS</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>Material UI</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>Bootstrap</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>SCSS</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>Responsive Design</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>Micro-Frontend Architecture</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>Zustand</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>Recharts</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/react/3D5A80" alt="React" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>React.js</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/nextdotjs/3D5A80" alt="Next.js" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Next.js</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/typescript/3D5A80" alt="TypeScript" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>TypeScript</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/redux/3D5A80" alt="Redux" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Redux / Redux Toolkit</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/reactquery/3D5A80" alt="React Query" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>React Query / TanStack</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/vite/3D5A80" alt="Vite" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Vite</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/tailwindcss/3D5A80" alt="Tailwind CSS" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Tailwind CSS</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/mui/3D5A80" alt="Material UI" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Material UI</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/bootstrap/3D5A80" alt="Bootstrap" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Bootstrap</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/sass/3D5A80" alt="SCSS" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>SCSS</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/googlechrome/3D5A80" alt="Responsive Design" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Responsive Design</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/webpack/3D5A80" alt="Micro-Frontend" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Micro-Frontend Architecture</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/zustand/3D5A80" alt="Zustand" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Zustand</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/d3/3D5A80" alt="Recharts" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Recharts</span></div>
         </div>
 
         <!-- Backend -->
         <div class="skill-panel" id="sk-backend">
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>Node.js</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>NestJS</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>Express.js</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>FastAPI</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>RESTful APIs</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>WebSockets / Socket.IO</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>JWT</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>Passport.js</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>OAuth</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>RBAC</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>Pydantic</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>TypeORM</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/nodedotjs/3D5A80" alt="Node.js" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Node.js</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/nestjs/3D5A80" alt="NestJS" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>NestJS</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/express/3D5A80" alt="Express.js" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Express.js</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/fastapi/3D5A80" alt="FastAPI" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>FastAPI</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/postman/3D5A80" alt="RESTful APIs" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>RESTful APIs</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/socketdotio/3D5A80" alt="Socket.IO" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>WebSockets / Socket.IO</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/jsonwebtokens/3D5A80" alt="JWT" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>JWT</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/passport/3D5A80" alt="Passport.js" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Passport.js</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/auth0/3D5A80" alt="OAuth" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>OAuth</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/gnupg/3D5A80" alt="RBAC" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>RBAC</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/pydantic/3D5A80" alt="Pydantic" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Pydantic</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/typeorm/3D5A80" alt="TypeORM" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>TypeORM</span></div>
         </div>
 
         <!-- AI -->
         <div class="skill-panel" id="sk-ai">
-          <div class="skill-tag"><span class="s-dot s-dot-plum"></span><span>LangChain</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-plum"></span><span>LangGraph</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-plum"></span><span>RAG (Retrieval-Augmented Generation)</span>
-          </div>
-          <div class="skill-tag"><span class="s-dot s-dot-plum"></span><span>Google Gemini API</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-plum"></span><span>LLM Integration</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-plum"></span><span>Generative AI</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-plum"></span><span>AWS Textract (OCR)</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-plum"></span><span>Python AI Pipelines</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/langchain/3D5A80" alt="LangChain" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>LangChain</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/langchain/3D5A80" alt="LangGraph" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>LangGraph</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/openai/3D5A80" alt="RAG" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>RAG (Retrieval-Augmented Generation)</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/googlegemini/3D5A80" alt="Google Gemini" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Google Gemini API</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/openai/3D5A80" alt="LLM Integration" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>LLM Integration</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/anthropic/3D5A80" alt="Generative AI" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Generative AI</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/amazonwebservices/3D5A80" alt="AWS Textract" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>AWS Textract (OCR)</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/python/3D5A80" alt="Python AI" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Python AI Pipelines</span></div>
         </div>
 
         <!-- Databases -->
         <div class="skill-panel" id="sk-databases">
-          <div class="skill-tag"><span class="s-dot s-dot-sky"></span><span>PostgreSQL</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sky"></span><span>MySQL</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sky"></span><span>MongoDB</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sky"></span><span>DynamoDB</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sky"></span><span>Redis</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/postgresql/3D5A80" alt="PostgreSQL" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>PostgreSQL</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/mysql/3D5A80" alt="MySQL" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>MySQL</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/mongodb/3D5A80" alt="MongoDB" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>MongoDB</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/amazondynamodb/3D5A80" alt="DynamoDB" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>DynamoDB</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/redis/3D5A80" alt="Redis" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Redis</span></div>
         </div>
 
         <!-- Cloud -->
         <div class="skill-panel" id="sk-cloud">
-          <div class="skill-tag"><span class="s-dot s-dot-warm"></span><span>AWS Lambda</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-warm"></span><span>AWS SQS</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-warm"></span><span>AWS SES / SNS</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-warm"></span><span>AWS EC2 / S3</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-warm"></span><span>AWS CloudWatch</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-warm"></span><span>Docker</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-warm"></span><span>GitHub Actions CI/CD</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-warm"></span><span>PM2</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-warm"></span><span>Git / GitHub / GitLab</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-warm"></span><span>Sentry</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/awslambda/3D5A80" alt="AWS Lambda" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>AWS Lambda</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/amazonsqs/3D5A80" alt="AWS SQS" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>AWS SQS</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/amazonsns/3D5A80" alt="AWS SES / SNS" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>AWS SES / SNS</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/amazons3/3D5A80" alt="AWS EC2 / S3" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>AWS EC2 / S3</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/amazoncloudwatch/3D5A80" alt="AWS CloudWatch" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>AWS CloudWatch</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/docker/3D5A80" alt="Docker" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Docker</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/githubactions/3D5A80" alt="GitHub Actions" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>GitHub Actions CI/CD</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/pm2/3D5A80" alt="PM2" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>PM2</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/git/3D5A80" alt="Git" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Git / GitHub / GitLab</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/sentry/3D5A80" alt="Sentry" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Sentry</span></div>
         </div>
 
         <!-- Integrations -->
         <div class="skill-panel" id="sk-integrations">
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>Stripe</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>Razorpay</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>Authorize.Net</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>Vonage API</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>Wordly API</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>Firebase FCM</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>Amazon Chime SDK</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>Oystehr FHIR R4B</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>Labcorp Lab Integration</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-sage"></span><span>Fullscript (eRx / OAuth)</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/stripe/3D5A80" alt="Stripe" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Stripe</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/razorpay/3D5A80" alt="Razorpay" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Razorpay</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/visa/3D5A80" alt="Authorize.Net" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Authorize.Net</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/vonage/3D5A80" alt="Vonage" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Vonage API</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/googletranslate/3D5A80" alt="Wordly" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Wordly API</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/firebase/3D5A80" alt="Firebase" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Firebase FCM</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/amazonwebservices/3D5A80" alt="Amazon Chime" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Amazon Chime SDK</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/redcross/3D5A80" alt="FHIR" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Oystehr FHIR R4B</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/flask/3D5A80" alt="Labcorp" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Labcorp Lab Integration</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/medscape/3D5A80" alt="Fullscript" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Fullscript (eRx / OAuth)</span></div>
         </div>
 
         <!-- Languages -->
         <div class="skill-panel" id="sk-languages">
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>JavaScript (ES6+)</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>TypeScript</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>Python</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>SQL</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>HTML5</span></div>
-          <div class="skill-tag"><span class="s-dot s-dot-blue"></span><span>CSS3 / SCSS</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/javascript/3D5A80" alt="JavaScript" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>JavaScript (ES6+)</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/typescript/3D5A80" alt="TypeScript" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>TypeScript</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/python/3D5A80" alt="Python" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>Python</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/postgresql/3D5A80" alt="SQL" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>SQL</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/html5/3D5A80" alt="HTML5" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>HTML5</span></div>
+          <div class="skill-tag"><img src="https://cdn.simpleicons.org/css3/3D5A80" alt="CSS3" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /><span>CSS3 / SCSS</span></div>
         </div>
       </div>
     </section>
@@ -2474,14 +2562,14 @@
                   CI/CD workflows.</li>
               </ul>
               <div class="exp-tags">
-                <span class="exp-tag">React.js</span>
-                <span class="exp-tag">Next.js</span>
-                <span class="exp-tag">NestJS</span>
-                <span class="exp-tag">TypeScript</span>
-                <span class="exp-tag">Python</span>
-                <span class="exp-tag">LangChain</span>
-                <span class="exp-tag">AWS</span>
-                <span class="exp-tag">PostgreSQL</span>
+                <span class="exp-tag"><img src="https://cdn.simpleicons.org/react/3D5A80" alt="React" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> React.js</span>
+                <span class="exp-tag"><img src="https://cdn.simpleicons.org/nextdotjs/3D5A80" alt="Next.js" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Next.js</span>
+                <span class="exp-tag"><img src="https://cdn.simpleicons.org/nestjs/3D5A80" alt="NestJS" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> NestJS</span>
+                <span class="exp-tag"><img src="https://cdn.simpleicons.org/typescript/3D5A80" alt="TypeScript" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> TypeScript</span>
+                <span class="exp-tag"><img src="https://cdn.simpleicons.org/python/3D5A80" alt="Python" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Python</span>
+                <span class="exp-tag"><img src="https://cdn.simpleicons.org/langchain/3D5A80" alt="LangChain" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> LangChain</span>
+                <span class="exp-tag"><img src="https://cdn.simpleicons.org/amazonwebservices/3D5A80" alt="AWS" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> AWS</span>
+                <span class="exp-tag"><img src="https://cdn.simpleicons.org/postgresql/3D5A80" alt="PostgreSQL" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> PostgreSQL</span>
               </div>
             </div>
           </article>
@@ -2506,11 +2594,11 @@
                   client communication.</li>
               </ul>
               <div class="exp-tags">
-                <span class="exp-tag">React.js</span>
-                <span class="exp-tag">Node.js</span>
-                <span class="exp-tag">Express.js</span>
-                <span class="exp-tag">MySQL</span>
-                <span class="exp-tag">MongoDB</span>
+                <span class="exp-tag"><img src="https://cdn.simpleicons.org/react/3D5A80" alt="React" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> React.js</span>
+                <span class="exp-tag"><img src="https://cdn.simpleicons.org/nodedotjs/3D5A80" alt="Node.js" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Node.js</span>
+                <span class="exp-tag"><img src="https://cdn.simpleicons.org/express/3D5A80" alt="Express.js" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Express.js</span>
+                <span class="exp-tag"><img src="https://cdn.simpleicons.org/mysql/3D5A80" alt="MySQL" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> MySQL</span>
+                <span class="exp-tag"><img src="https://cdn.simpleicons.org/mongodb/3D5A80" alt="MongoDB" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> MongoDB</span>
               </div>
             </div>
           </article>
@@ -2552,24 +2640,24 @@
             </div>
             <div>
               <div class="project-tech-stack">
-                <span class="p-tag">Next.js 16</span>
-                <span class="p-tag">React 19</span>
-                <span class="p-tag">TypeScript</span>
-                <span class="p-tag">NestJS 11</span>
-                <span class="p-tag">PostgreSQL</span>
-                <span class="p-tag">TypeORM</span>
-                <span class="p-tag">Redis</span>
-                <span class="p-tag">AWS SQS/SES/SNS</span>
-                <span class="p-tag">Textract</span>
-                <span class="p-tag">Socket.IO</span>
-                <span class="p-tag">Chime SDK</span>
-                <span class="p-tag">FHIR R4B</span>
-                <span class="p-tag">Labcorp</span>
-                <span class="p-tag">Stripe</span>
-                <span class="p-tag">JWT</span>
-                <span class="p-tag">Sentry</span>
-                <span class="p-tag">Docker</span>
-                <span class="p-tag">GitHub Actions</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/nextdotjs/3D5A80" alt="Next.js" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Next.js 16</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/react/3D5A80" alt="React" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> React 19</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/typescript/3D5A80" alt="TypeScript" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> TypeScript</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/nestjs/3D5A80" alt="NestJS" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> NestJS 11</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/postgresql/3D5A80" alt="PostgreSQL" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> PostgreSQL</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/typeorm/3D5A80" alt="TypeORM" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> TypeORM</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/redis/3D5A80" alt="Redis" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Redis</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/amazonsqs/3D5A80" alt="AWS SQS" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> AWS SQS/SES/SNS</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/amazonwebservices/3D5A80" alt="Textract" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Textract</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/socketdotio/3D5A80" alt="Socket.IO" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Socket.IO</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/amazonwebservices/3D5A80" alt="Chime SDK" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Chime SDK</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/redcross/3D5A80" alt="FHIR" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> FHIR R4B</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/flask/3D5A80" alt="Labcorp" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Labcorp</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/stripe/3D5A80" alt="Stripe" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Stripe</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/jsonwebtokens/3D5A80" alt="JWT" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> JWT</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/sentry/3D5A80" alt="Sentry" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Sentry</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/docker/3D5A80" alt="Docker" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Docker</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/githubactions/3D5A80" alt="GitHub Actions" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> GitHub Actions</span>
               </div>
             </div>
           </article>
@@ -2593,13 +2681,13 @@
                 </div>
               </div>
               <div class="project-tech-stack">
-                <span class="p-tag">React (Vite)</span>
-                <span class="p-tag">Node.js</span>
-                <span class="p-tag">Express.js</span>
-                <span class="p-tag">Vonage API</span>
-                <span class="p-tag">Wordly API</span>
-                <span class="p-tag">Authorize.Net</span>
-                <span class="p-tag">SCSS</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/react/3D5A80" alt="React" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> React (Vite)</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/nodedotjs/3D5A80" alt="Node.js" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Node.js</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/express/3D5A80" alt="Express.js" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Express.js</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/vonage/3D5A80" alt="Vonage" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Vonage API</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/googletranslate/3D5A80" alt="Wordly" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Wordly API</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/visa/3D5A80" alt="Authorize.Net" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Authorize.Net</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/sass/3D5A80" alt="SCSS" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> SCSS</span>
               </div>
             </article>
 
@@ -2620,13 +2708,13 @@
                 </div>
               </div>
               <div class="project-tech-stack">
-                <span class="p-tag">React.js</span>
-                <span class="p-tag">Redux</span>
-                <span class="p-tag">Node.js</span>
-                <span class="p-tag">Gemini API</span>
-                <span class="p-tag">AWS Lambda</span>
-                <span class="p-tag">DynamoDB</span>
-                <span class="p-tag">Stripe</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/react/3D5A80" alt="React" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> React.js</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/redux/3D5A80" alt="Redux" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Redux</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/nodedotjs/3D5A80" alt="Node.js" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Node.js</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/googlegemini/3D5A80" alt="Gemini" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Gemini API</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/awslambda/3D5A80" alt="AWS Lambda" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> AWS Lambda</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/amazondynamodb/3D5A80" alt="DynamoDB" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> DynamoDB</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/stripe/3D5A80" alt="Stripe" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Stripe</span>
               </div>
             </article>
 
@@ -2644,12 +2732,12 @@
                 <div class="project-feat">Code reviews, UI defect resolution, and framework upgrade compatibility.</div>
               </div>
               <div class="project-tech-stack">
-                <span class="p-tag">Next.js</span>
-                <span class="p-tag">React.js</span>
-                <span class="p-tag">Redux</span>
-                <span class="p-tag">React Query</span>
-                <span class="p-tag">SCSS</span>
-                <span class="p-tag">NestJS</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/nextdotjs/3D5A80" alt="Next.js" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Next.js</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/react/3D5A80" alt="React" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> React.js</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/redux/3D5A80" alt="Redux" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Redux</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/reactquery/3D5A80" alt="React Query" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> React Query</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/sass/3D5A80" alt="SCSS" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> SCSS</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/nestjs/3D5A80" alt="NestJS" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> NestJS</span>
               </div>
             </article>
 
@@ -2668,12 +2756,12 @@
                 </div>
               </div>
               <div class="project-tech-stack">
-                <span class="p-tag">React.js</span>
-                <span class="p-tag">Node.js</span>
-                <span class="p-tag">MySQL</span>
-                <span class="p-tag">Bootstrap</span>
-                <span class="p-tag">HTML</span>
-                <span class="p-tag">CSS</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/react/3D5A80" alt="React" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> React.js</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/nodedotjs/3D5A80" alt="Node.js" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Node.js</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/mysql/3D5A80" alt="MySQL" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> MySQL</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/bootstrap/3D5A80" alt="Bootstrap" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> Bootstrap</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/html5/3D5A80" alt="HTML" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> HTML</span>
+                <span class="p-tag"><img src="https://cdn.simpleicons.org/css3/3D5A80" alt="CSS" class="tech-icon" loading="lazy" onerror="this.style.display='none'" /> CSS</span>
               </div>
             </article>
           </div>
